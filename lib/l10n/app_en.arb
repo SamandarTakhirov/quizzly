@@ -1,0 +1,13 @@
+{
+  "name": "QUIZZLY",
+  "title": "Welcome to Quizzly!",
+  "info": "With Quizzly, you can improve your thinking, intelligence and logical skills.",
+  "levelsList": "Choose the appropriate level...",
+  "level": "Level",
+  "question": "Question",
+  "score": "Your Score",
+  "wrong": "Wrong",
+  "correct": "Correct",
+  "again": "Play again",
+  "home": "Home"
+}

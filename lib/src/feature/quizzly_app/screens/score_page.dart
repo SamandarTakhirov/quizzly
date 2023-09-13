@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../l10n/app_localization.dart';
 import '../../../common/constants/app_colors.dart';
 import '../../../common/constants/app_icons.dart';
 import '../widgets/option_button.dart';
@@ -60,6 +61,7 @@ class _ScorePageState extends State<ScorePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
+    final l10n = AppLocalizations.of(context);
 
     return Stack(
       alignment: Alignment.topCenter,
@@ -115,9 +117,9 @@ class _ScorePageState extends State<ScorePage> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Text(
-                                            "Your Score",
-                                            style: TextStyle(
+                                          Text(
+                                            l10n.score,
+                                            style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.w500,
                                               color: AppColor.mainTextColor,
@@ -180,9 +182,9 @@ class _ScorePageState extends State<ScorePage> {
                                     ),
                                   ),
                                 ),
-                                const Text(
-                                  "Correct",
-                                  style: TextStyle(
+                                 Text(
+                                  l10n.correct,
+                                  style: const TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -201,9 +203,9 @@ class _ScorePageState extends State<ScorePage> {
                                     ),
                                   ),
                                 ),
-                                const Text(
-                                  "Wrong",
-                                  style: TextStyle(
+                                 Text(
+                                  l10n.wrong,
+                                  style: const TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -219,14 +221,14 @@ class _ScorePageState extends State<ScorePage> {
               ),
               SizedBox(height: size.height * 0.05),
               OptionButton(
-                text: "Play again",
+                text: l10n.again,
                 onPressed: openQuizPage,
                 height: size.height,
                 width: size.width,
               ),
               SizedBox(height: size.height * 0.03),
               OptionButton(
-                text: "Home",
+                text: l10n.home,
                 onPressed: openHomePage,
                 height: size.height,
                 width: size.width,
@@ -235,8 +237,8 @@ class _ScorePageState extends State<ScorePage> {
               SizedBox(
                 width: size.width,
                 height: size.height * 0.08,
-                child: const DecoratedBox(
-                  decoration: BoxDecoration(
+                child:  DecoratedBox(
+                  decoration: const BoxDecoration(
                     color: AppColor.mainColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(38),
@@ -245,8 +247,8 @@ class _ScorePageState extends State<ScorePage> {
                   ),
                   child: Center(
                     child: Text(
-                      "QUIZZLY",
-                      style: TextStyle(
+                     l10n.name,
+                      style: const TextStyle(
                         color: AppColor.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w500,

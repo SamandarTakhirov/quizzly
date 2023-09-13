@@ -1,11 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:quizzly/src/feature/quizzly_app/widgets/option_button.dart';
 
+import '../../../../l10n/app_localization.dart';
 import '../../../common/constants/app_colors.dart';
 import '../../../common/constants/app_icons.dart';
 import '../models/genirator_quiz.dart';
+import '../widgets/option_button.dart';
 import 'score_page.dart';
 
 class QuizPage extends StatefulWidget {
@@ -68,6 +69,8 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
+    final l10n = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -161,7 +164,7 @@ class _QuizPageState extends State<QuizPage> {
                                 valueListenable: count,
                                 builder: (context, value, child) {
                                   return Text(
-                                    "Question $value/10",
+                                    "${l10n.question} $value/10",
                                     style: const TextStyle(
                                       color: AppColor.mainTextColor,
                                       fontSize: 22,
@@ -241,7 +244,8 @@ class _QuizPageState extends State<QuizPage> {
                                         ),
                                       ],
                                     );
-                                  },),
+                                  },
+                                ),
                         ),
                       ),
                     ),
@@ -298,8 +302,8 @@ class _QuizPageState extends State<QuizPage> {
             child: SizedBox(
               width: size.width,
               height: size.width * 0.15,
-              child: const DecoratedBox(
-                decoration: BoxDecoration(
+              child: DecoratedBox(
+                decoration: const BoxDecoration(
                   color: AppColor.mainColor,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(38),
@@ -308,8 +312,8 @@ class _QuizPageState extends State<QuizPage> {
                 ),
                 child: Center(
                   child: Text(
-                    "QUIZZLY",
-                    style: TextStyle(
+                    l10n.name,
+                    style: const TextStyle(
                       color: AppColor.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w500,

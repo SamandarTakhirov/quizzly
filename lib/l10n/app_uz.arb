@@ -1,0 +1,13 @@
+{
+  "name": "QUIZZLY",
+  "title": "Quizzlyga Xush kelibsiz!",
+  "info": "Quizzly yordamida siz fikrlash, aql va mantiqiy ko'nikmalaringizni yaxshilashingiz mumkin.",
+  "levelsList": "Boshqichlardan birini tanlang...",
+  "level": "Bosqich",
+  "question": "Savol",
+  "score": "Natijangiz",
+  "correct": "To'g'ri",
+  "wrong": "Xato",
+  "again": "Qayta boshlash",
+  "home": "Home"
+}
